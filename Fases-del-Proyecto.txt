@@ -1,0 +1,21 @@
+Directorio del Proyecto
+----------------------------------------
+cd C:/xampp/htdocs/Laravel
+
+Instalación Laravel v7.6
+----------------------------------------
+composer create-project --prefer-dist laravel/laravel DataTablesCRUD
+cd DataTablesCRUD
+
+Instalación DataTables
+----------------------------------------
+composer require yajra/laravel-datatables-oracle
+
+Añadir en: config/app.php (providers | aliases)
+----------------------------------------
+Yajra\DataTables\DataTablesServiceProvider::class,
+'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+
+Creación Controlador: RegistroController 
+----------------------------------------
+php artisan make:controller RegistroController --resource --model=Registro
